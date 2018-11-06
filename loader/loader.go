@@ -824,6 +824,7 @@ func (l *Loader) loadProtoDeps() error {
 			}
 		}
 	}
+	fmt.Println(missing)
 
 	tmpl := template.Must(template.New("letter").Parse(`
 syntax = "proto3";
@@ -861,6 +862,7 @@ syntax = "proto3";
 		if *pfile.Name == "gunk-proto" {
 			continue
 		}
+		fmt.Println(*pfile.Name)
 		l.allProto[*pfile.Name] = pfile
 	}
 	return nil
