@@ -18,6 +18,11 @@ Gunk can be installed in the usual Go fashion:
 
 	go get -u github.com/gunk/gunk
 
+## Required installs
+
+    - Go (any specific version?)
+    - Protoc
+
 ## Syntax
 
 The aim of Gunk is to provide Go-compatible syntax that can be natively read
@@ -135,3 +140,14 @@ out=v1/js
 import_style=commonjs
 binary
 ```
+
+## Convert
+
+Gunk provides functionality to convert a proto file to a Gunk file.
+
+    $ gunk convert /path/to/file.proto
+
+This will convert your proto file to the equivalent Gunk file. Currently
+this only works for single proto files.
+
+## Gunk Annotations
